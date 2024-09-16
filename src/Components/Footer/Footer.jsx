@@ -1,5 +1,4 @@
 import React from 'react';
-import logoImage from '../Images/Rent-Ease-color-logo-2.png'; 
 
 const Footer = () => {
   return (
@@ -9,7 +8,7 @@ const Footer = () => {
         
         <div className="mb-6 lg:mb-0">
 
-          <img src={logoImage} alt="RentBro Logo" className="w-44 rounded-full" />
+          <img src='/public/Images/Rent-Ease-color-logo-2.png' alt="RentBro Logo" className="w-44 rounded-full" />
           
           <address className="not-italic text-lg font-semibold text-gray-700 mt-4">
             25 Hanuman Nagar,<br />
@@ -82,7 +81,7 @@ const Footer = () => {
             </div>
             <button
               type="submit"
-              className="bg-pink-500 text-white px-6 py-2 rounded"
+              className="bg-slate-600 text-white px-6 py-2 rounded"
             >
               Submit
             </button>

@@ -2,35 +2,31 @@ import React, { useState } from 'react';
 import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
 import { MdOutlineStar } from "react-icons/md";
 import { IoMdStarOutline } from "react-icons/io";
-import Person1 from '../Images/Person1.jpg';
-import Person2 from '../Images/Person2.jpg';
-import Person3 from '../Images/Person3.jpg';
-import Person4 from '../Images/Person4.jpg';
 import Faq from '../FAQ/Faq';
 
 
 const testimonials = [
   {
     name: "Ravi Singh",
-    image: Person1,  
+    image: '/public/Images/Person1.jpg',  
     rating: 5,
     review: "Rent Ease made finding my perfect rental so easy! The platform's search filters helped me quickly narrow down my options based on location, budget, and amenities. I loved that all the listings were verified, giving me peace of mind.",
   },
   {
     name: "Anivesh Singh",
-    image: Person2,  
+    image: '/public/Images/Person2.jpg',  
     rating: 4,
     review: "Great platform! The customer service team was very helpful and I found a house within a week!",
   },
   {
     name: "Shreeram Yadav",
-    image: Person3,  
+    image: '/public/Images/Person3.jpg',  
     rating: 4,
     review: "Renting a home has never been this easy. The verified listings gave me peace of mind, and the landlord communication was seamless.",
   },
   {
     name : "Sandip Kori",
-    image : Person4,
+    image : '/public/Images/Person4.jpg',
     rating : 5,
     review : "I love how this site provides all the necessary details upfront. I didn’t need to contact multiple agents to get the information I needed!",
   }

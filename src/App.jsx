@@ -1,16 +1,30 @@
-import React from 'react'
-import Nav from './Components/Navbar/Nav'
-import Routing from './utils/Routing'
+import React, { useEffect, useRef } from 'react';
+import Nav from './Components/Navbar/Nav';
+import Routing from './utils/Routing';
+import Lenis from 'lenis';
 
 const App = () => {
-  return (
-    <div>
-      <div>
-        <Nav />
-      </div>
-      <Routing />
-    </div>
-  )
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration : 3.5
+    })
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
 }
 
-export default App
+requestAnimationFrame(raf)
+  }, [scrollContainerRef]);
+
+  return (
+    <div ref={scrollContainerRef}>
+      <Nav />
+      <Routing />
+    </div>
+  );
+};
+
+export default App;

@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
-import locationWorkImage from '../Images/location-work.png';
-import moving from '../Images/moving-luggage.png';
-import payment from '../Images/payment.png'
 import FeatureRoomList from '../Featured/FeatureRoomList';
 
 const RentWorks = () => {
   const [datawork] = useState([
     {
-      image: locationWorkImage,
+      image: '/public/Images/location-work.png',
       title: "Search through thousands of verified rooms, filter by location, price, and amenities.",
       description: "Our powerful search tools allow you to filter listings by location, price range, and amenities, ensuring you find a space that fits your needs perfectly. Whether you're looking for a budget-friendly room or a place with premium features, our platform offers a seamless and personalized experience, making room hunting easy and stress-free."
     },
-    {image : payment, title : "Choose your preferred room and securely complete the booking process", description : "Choose your ideal room from a variety of verified listings, tailored to your preferences. With just a few clicks, securely complete the booking process using trusted payment methods, ensuring your rental is confirmed with ease. Enjoy peace of mind as you finalize everything from the comfort of your home, knowing your transaction is safe and protected."},
+    {image : '/public/Images/payment.png', title : "Choose your preferred room and securely complete the booking process", description : "Choose your ideal room from a variety of verified listings, tailored to your preferences. With just a few clicks, securely complete the booking process using trusted payment methods, ensuring your rental is confirmed with ease. Enjoy peace of mind as you finalize everything from the comfort of your home, knowing your transaction is safe and protected."},
     {
-      image: moving,
+      image: '/public/Images/moving-luggage.png',
       title: "Move in on your selected date and enjoy flexible rental terms.",
       description: "Move in on your chosen date and experience the convenience of flexible rental terms tailored to your needs. Whether you're looking for a short-term stay or a long-term lease, Rent Ease offers adaptable options that fit your lifestyle. Enjoy a hassle-free move-in process with verified listings and seamless support, making your rental experience smooth and stress-free."
     }
