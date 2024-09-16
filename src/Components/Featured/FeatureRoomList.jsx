@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Rating from "../Reviews/Rating"
 
 const FeatureRoomList = () => {
@@ -43,19 +43,19 @@ const FeatureRoomList = () => {
   ])
 
   return (
-    <div className='container mx-auto p-6'>
-      <h1 className='text-center text-6xl font-semibold mb-8'>Featured Room Listings</h1>
-      <div className='flex justify-center flex-wrap gap-8'>
+    <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+      <h1 className='text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 sm:mb-12 lg:mb-16'>Featured Room Listings</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
         {featureData.map((item, index) => {
           return (
-            <div key={index} className='w-96 rounded-md overflow-hidden shadow-lg'>
-              <div className='w-full h-52'>
+            <div key={index} className='rounded-md overflow-hidden shadow-lg'>
+              <div className='w-full h-48 sm:h-52'>
                 <img className='w-full h-full object-cover' src={item.image} alt={item.title} />
               </div>
               <div className='p-4'>
-                <h2 className='font-semibold text-2xl'>{item.title}</h2>
-                <p className='text-zinc-800 mb-2'>{item.description}</p>
-                <p className='font-semibold text-xl'>Price: {item.price}</p>
+                <h2 className='font-semibold text-xl sm:text-2xl'>{item.title}</h2>
+                <p className='text-zinc-800 mb-2 text-sm sm:text-base'>{item.description}</p>
+                <p className='font-semibold text-lg sm:text-xl'>Price: {item.price}</p>
               </div>
             </div>
           )

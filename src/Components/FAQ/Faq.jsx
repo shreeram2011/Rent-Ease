@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Footer from '../Footer/Footer';
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
@@ -46,22 +46,22 @@ const FAQ = () => {
   };
 
   return (
-    <div className="faq-container w-full mx-auto p-6">
-      <h1 className="text-6xl font-bold text-center mb-16">Frequently Asked Questions</h1>
+    <div className="faq-container w-full mx-auto p-4 sm:p-6 md:max-w-4xl">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 sm:mb-12 md:mb-16">Frequently Asked Questions</h1>
       <div className="faq-list">
         {faqData.map((item, index) => (
-          <div key={index} className="faq-item border-b-2 py-4">
+          <div key={index} className="faq-item border-b-2 py-3 sm:py-4">
             <div 
               className="faq-question flex justify-between items-center cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
-              <h2 className={`text-3xl font-semibold ${openIndex === index ? 'text-red-600' : 'text-black'}`}>
+              <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold ${openIndex === index ? 'text-red-600' : 'text-black'}`}>
                 {item.question}
               </h2>
-              {openIndex === index ? <FaChevronUp className="text-red-600" /> : <FaChevronDown className="text-red-600" />}
+              {openIndex === index ? <FaChevronUp className="text-red-600 text-lg sm:text-xl" /> : <FaChevronDown className="text-red-600 text-lg sm:text-xl" />}
             </div>
             {openIndex === index && (
-              <div className="faq-answer mt-2 text-gray-600 text-xl">
+              <div className="faq-answer mt-2 text-gray-600 text-base sm:text-lg md:text-xl">
                 <p>{item.answer}</p>
               </div>
             )}

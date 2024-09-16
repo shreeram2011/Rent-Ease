@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FeatureRoomList from '../Featured/FeatureRoomList';
 
 const RentWorks = () => {
-  const [datawork] = useState([
+  const datawork = [
     {
       image: '/public/Images/location-work.png',
       title: "Search through thousands of verified rooms, filter by location, price, and amenities.",
@@ -14,23 +14,22 @@ const RentWorks = () => {
       title: "Move in on your selected date and enjoy flexible rental terms.",
       description: "Move in on your chosen date and experience the convenience of flexible rental terms tailored to your needs. Whether you're looking for a short-term stay or a long-term lease, Rent Ease offers adaptable options that fit your lifestyle. Enjoy a hassle-free move-in process with verified listings and seamless support, making your rental experience smooth and stress-free."
     }
-  ]);
+  ];
 
   return (
-    <div>
-      <h1 className='text-6xl text-center font-semibold pb-16'>How Rent Ease Works</h1>
+    <div className="container mx-auto px-4">
+      <h1 className='text-3xl md:text-6xl text-center font-semibold pb-8 md:pb-16'>How Rent Ease Works</h1>
       <div>
         {datawork.map((item, index) => {
-
           const isEven = index % 2 === 0;
           return (
-            <div key={index} className={`w-full h-fit flex justify-center px-10 mb-16 ${isEven ? 'flex-row' : 'flex-row-reverse'} gap-12`}>
-              <div className='w-1/4 mx-10'>
-                <img className='w-full' src={item.image} alt="work" />
+            <div key={index} className={`w-full flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} justify-center items-center mb-12 md:mb-16`}>
+              <div className='w-full md:w-1/3 mb-6 md:mb-0 md:mx-5'>
+                <img className='w-full h-auto' src={item.image} alt="work" />
               </div>
-              <div className='w-2/3 p-14'>
-                <h1 className='text-4xl font-semibold leading-10 mb-5'>{item.title}</h1>
-                <p className='text-2xl text-slate-700'>{item.description}</p>
+              <div className='w-full md:w-2/3 px-4 md:px-14'>
+                <h2 className='text-2xl md:text-4xl font-semibold leading-tight mb-3 md:mb-5'>{item.title}</h2>
+                <p className='text-lg md:text-2xl text-slate-700'>{item.description}</p>
               </div>
             </div>
           );

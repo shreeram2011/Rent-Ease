@@ -8,15 +8,15 @@ const App = () => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration : 3.5
+      duration: 3.5
     })
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
 
-requestAnimationFrame(raf)
+    requestAnimationFrame(raf)
   }, [scrollContainerRef]);
 
   return (
