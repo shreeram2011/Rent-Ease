@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:justify-between">
           
-          <div className="mb-8 lg:mb-0">
+          <div className="mb-8 lg:mb-0 w-full lg:w-1/3">
             <img src='/Images/Rent-Ease-color-logo-2.png' alt="RentBro Logo" className="w-32 sm:w-44 rounded-full" />
             
             <address className="not-italic text-base sm:text-lg font-semibold text-gray-700 mt-4">
@@ -28,8 +28,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between space-y-6 sm:space-y-0 sm:space-x-8 mb-8 lg:mb-0">
-            <div>
+          <div className="flex flex-col sm:flex-row justify-between space-y-6 sm:space-y-0 sm:space-x-8 mb-8 lg:mb-0 w-full lg:w-1/3">
+            <div className="w-full sm:w-1/2">
               <h3 className="text-lg font-semibold mb-2">Company</h3>
               <ul className="text-gray-700 space-y-2">
                 <li><a href="#">Home</a></li>
@@ -39,13 +39,13 @@ const Footer = () => {
               </ul>
             </div>
          
-            <div>
+            <div className="w-full sm:w-1/2">
               <h3 className="text-lg font-semibold mb-2">Legal</h3>
               <ul className="text-gray-700 space-y-2">
                 <li><a href="#">Term of use</a></li>
                 <li><a href="#">Privacy policy</a></li>
                 <li><a href="#">Sitemap</a></li>
-                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">FAQ&apos;s</a></li>
                 <li><a href="#">Blog</a></li>
               </ul>
             </div>
