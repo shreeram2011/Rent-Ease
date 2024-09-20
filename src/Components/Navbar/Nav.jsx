@@ -43,9 +43,9 @@ const Nav = () => {
         </NavLink>
         <NavLink 
           className={(navData) => navData.isActive ? 'scale-110 underline' : ''}
-          to="/about"
+          to="/blog"
         >
-          About
+          Blog
         </NavLink>
         <NavLink 
           className={(navData) => navData.isActive ? 'scale-110 underline' : ''}
