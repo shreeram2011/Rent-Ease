@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
 import { MdOutlineStar } from "react-icons/md";
 import { IoMdStarOutline } from "react-icons/io";
@@ -34,6 +34,14 @@ const testimonials = [
 const Rating = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000); // Change review every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
@@ -63,7 +71,7 @@ const Rating = () => {
       <h1 className='text-3xl md:text-6xl text-center font-semibold mt-8 md:mt-16'>What Renters Are Saying</h1>
       <div className="rating-section text-center py-6 md:py-10">
         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-          <div className="testimonial-card flex flex-col items-center w-full md:w-4/5 h-[400px] md:h-96 p-4 md:p-6 shadow-lg">
+          <div className="testimonial-card flex flex-col items-center w-full md:w-4/5 h-[400px] md:h-96 p-4 md:p-6 shadow-lg transition-transform duration-1000 ease-in-out transform">
             <img
               src={image}
               alt={name}

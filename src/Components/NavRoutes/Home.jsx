@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import RentEase from '../Cards/RentEase';
 import { IoSearch } from "react-icons/io5";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   return (
     <div className='w-full min-h-screen'>
       <div className='absolute -z-10 top-0 w-full h-full opacity-95'>
@@ -13,17 +23,17 @@ const Home = () => {
         />
       </div>
       <div className='container mx-auto px-4 py-12 md:py-24'>
-        <h1 className='text-4xl md:text-6xl font-bold text-zinc-200 text-center mt-24 md:mt-32'>
+        <h1 className='text-4xl md:text-6xl font-bold text-zinc-200 text-center mt-24 md:mt-32' data-aos="fade-up">
           Find Your Perfect Room, Anytime, Anywhere
         </h1>
-        <h4 className='text-center text-xl md:text-3xl text-zinc-200 mt-6 md:mt-12'>
+        <h4 className='text-center text-xl md:text-3xl text-zinc-200 mt-6 md:mt-12' data-aos="fade-up" data-aos-delay="200">
           Explore verified listings, secure payments, and flexible lease terms at your fingertips.
         </h4>
-        <h5 className='text-center text-lg md:text-xl mt-8 md:mt-16 text-zinc-200'>
+        <h5 className='text-center text-lg md:text-xl mt-8 md:mt-16 text-zinc-200' data-aos="fade-up" data-aos-delay="400">
           Search, filter, and rent verified rooms with flexible terms
         </h5>
 
-        <div className='flex justify-center items-center w-full mt-8 md:mt-12'>
+        <div className='flex justify-center items-center w-full mt-8 md:mt-12' data-aos="fade-up" data-aos-delay="600">
           <div className='bg-white p-4 rounded-md w-full md:w-2/3'>
             <form className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center' action="">
               <div className='w-full md:w-auto'>

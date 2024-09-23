@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import FeatureRoomList from '../Featured/FeatureRoomList';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const RentWorks = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   const datawork = [
     {
       image: '/Images/location-work.png',
@@ -23,7 +33,7 @@ const RentWorks = () => {
         {datawork.map((item, index) => {
           const isEven = index % 2 === 0;
           return (
-            <div key={index} className={`w-full flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} justify-center items-center mb-12 md:mb-16`}>
+            <div key={index} className={`w-full flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} justify-center items-center mb-12 md:mb-16`} data-aos={isEven ? 'fade-right' : 'fade-left'}>
               <div className='w-full md:w-1/3 mb-6 md:mb-0 md:mx-5'>
                 <img className='w-full h-auto' src={item.image} alt="work" />
               </div>

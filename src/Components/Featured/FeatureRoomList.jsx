@@ -1,7 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Rating from "../Reviews/Rating"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const FeatureRoomList = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
 
   const [featureData] = useState([
     {
@@ -44,11 +54,11 @@ const FeatureRoomList = () => {
 
   return (
     <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-      <h1 className='text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 sm:mb-12 lg:mb-16'>Featured Room Listings</h1>
+      <h1 className='text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 sm:mb-12 lg:mb-16' data-aos="fade-up">Featured Room Listings</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
         {featureData.map((item, index) => {
           return (
-            <div key={index} className='rounded-md overflow-hidden shadow-lg'>
+            <div key={index} className='rounded-md overflow-hidden shadow-lg' data-aos="fade-up" data-aos-delay={`${index * 100}`}>
               <div className='w-full h-48 sm:h-52'>
                 <img className='w-full h-full object-cover' src={item.image} alt={item.title} />
               </div>
