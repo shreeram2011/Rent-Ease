@@ -20,7 +20,7 @@ const RentCards = () => {
 
   return (
     <>
-    <div className='w-full min-h-screen flex justify-center pt-8 md:pt-16'>
+    <div className='w-full min-h-screen flex justify-center pt-2 md:pt-4'>
       <div className='flex justify-center gap-4 md:gap-6 flex-wrap w-full'>
         {data.map((item, index) => (
           <div key={index} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4'>

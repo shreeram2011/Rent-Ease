@@ -17,7 +17,7 @@ const RentWorks = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 py-16">
       <h1 className='text-3xl md:text-6xl text-center font-semibold pb-8 md:pb-16'>How Rent Ease Works</h1>
       <div>
         {datawork.map((item, index) => {
