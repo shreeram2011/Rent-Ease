@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Footer from '../Footer/Footer';
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { animateScroll as scroll } from 'react-scroll';
 
 const faqData = [
   {
@@ -43,10 +42,6 @@ const FAQ = () => {
       setOpenIndex(null);
     } else {
       setOpenIndex(index);
-      scroll.scrollTo(index * 100, {
-        duration: 500,
-        smooth: 'easeInOutQuart'
-      });
     }
   };
 
